@@ -1,0 +1,57 @@
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.completo {
+  animation: aparecer 1s ease-out both;
+}
+
+.centered-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.grid1 {
+  height: 100%;
+  padding: 0px;
+}
+
+.row1 {
+  height: 50%;
+  background: -moz-linear-gradient(45deg, rgba(61, 66, 150, 1) 0%, rgba(84, 74, 171, 0.8) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(61, 66, 150, 1) 0%, rgba(84, 74, 171, 0.8) 100%);
+  background: linear-gradient(45deg, rgba(61, 66, 150, 1) 0%, rgba(84, 74, 171, 0.8) 100%);
+  justify-content: center;
+}
+
+.button-container {
+  font-size: medium;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 100;
+}
+
+
+.alert-danger.mensajeError {
+  font-size: 0.7rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ion-item {
+  border: none;
+  /* Elimina todos los bordes alrededor del elemento */
+  border-bottom: 1px solid white;
+  /* Agrega un borde inferior blanco de 2 píxeles */
+  border-radius: 5px;
+  /* Redondea los bordes con un radio de 5 píxeles */
+}

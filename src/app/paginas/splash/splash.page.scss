@@ -1,0 +1,155 @@
+//FONDO
+@keyframes k {
+
+  0%,
+  100% {
+    transform: scale(1) translateY(0);
+    transform-origin: 50% 16%
+  }
+
+  100% {
+    transform: scale(1.25) translateY(-15px);
+    transform-origin: top
+  }
+}
+
+ion-content {
+  --background: none
+}
+
+.contenedor {
+  background-color: #3F4974;
+  background-image: url('/assets/background/splashback.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap
+}
+
+//TEXTO1
+@keyframes b-i-t {
+  0% {
+    transform: translateY(-500px);
+    animation-timing-function: ease-in;
+    opacity: 0
+  }
+
+  38%,
+  72%,
+  95% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1
+  }
+
+  55% {
+    transform: translateY(-65px)
+  }
+
+  81% {
+    transform: translateY(-28px)
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+.header-text {
+  color: #D2E7FF;
+  font-size: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+}
+
+.text-container {
+  position: absolute;
+  top: 8%;
+  width: 100%;
+  animation: b-i-t 1.1s both
+}
+
+//TEXTO2
+@keyframes b-i-b {
+  0% {
+    transform: translateY(500px);
+    animation-timing-function: ease-in;
+    opacity: 0
+  }
+
+  38%,
+  72%,
+  95% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1
+  }
+
+  55% {
+    transform: translateY(65px)
+  }
+
+  81% {
+    transform: translateY(28px)
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+.text2-container {
+  font-size: 2rem;
+  position: absolute;
+  top: 85%;
+  bottom: 10%;
+  width: 100%;
+  animation: b-i-b 1.1s both
+}
+
+
+//ICONO
+@keyframes r-a {
+  0% {
+    transform: translateZ(0);
+    opacity: 1;
+    width: 60%;
+  }
+  100% {
+    transform: translateZ(800px) rotate(720deg) scale(7);
+    opacity: 1;
+    width: 120%;
+  }
+}
+
+.contenedor-imagen {
+  position: relative;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  animation: r-a 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+  z-index: 2;
+}
+
+.contenedor-imagen img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  max-width: 60%;
+  max-height: 60%;
+  margin: auto;
+}
+

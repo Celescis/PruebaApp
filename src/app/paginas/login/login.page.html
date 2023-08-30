@@ -1,0 +1,71 @@
+<ion-content class="completo">
+  <ion-grid class="grid1">
+    <ion-row class="row1">
+      <ion-col class="col1" size="12">
+        <h1 class="centered-title">LOGIN</h1>
+      </ion-col>
+
+      <ion-card color="dark">
+        <img alt="Pingu" src="/assets/background/back.png" />
+        <ion-card-header>
+          <ion-card-title class="centered-title">INGRESE SUS DATOS:</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <form (submit)="Login()">
+            <ion-item class="ion-item" color="dark">
+              <ion-input aria-label="Correo" [clearOnEdit]="true" type="email" [formControl]="correo"
+                placeholder="Correo" errorText="Correo invalido" ngModel email></ion-input>
+
+            </ion-item>
+            <div class="alert alert-danger mensajeError mt-1 bi bi-exclamation-octagon-fill"
+              [hidden]="correo.valid || (correo.pristine && correo.untouched)">
+
+              <span *ngIf="correo.errors?.['required']">
+                Este campo es obligatorio
+              </span>
+
+              <span *ngIf="correo.errors?.['email']">
+                Debe contener @
+              </span>
+
+            </div>
+
+            <ion-item class="ion-item" color="dark">
+
+              <ion-input aria-label="Contraseña" [clearOnEdit]="true" type="password" placeholder="Contraseña"
+                [formControl]="password" [counter]="true" maxlength="8" errorText="Contraseña incorrecta" ngModel
+                password></ion-input>
+
+            </ion-item>
+            <div class="alert alert-danger mensajeError mt-1 bi bi-exclamation-octagon-fill"
+              [hidden]="password.valid || (password.pristine && password.untouched)">
+
+              <span *ngIf="password.errors?.['required']">
+                Este campo es obligatorio
+              </span>
+
+              <span *ngIf="password.errors?.['minlength']">
+                Debe tener como minimo 6 caracteres
+              </span>
+
+            </div>
+            <br>
+            <div class="button-container">
+              <ion-button expand="block" color="tertiary" shape="round" type="submit"> Iniciar Sesión </ion-button>
+            </div>
+            <ion-card-title class="centered-title">USUARIOS PRECARGADOS:</ion-card-title>
+            <div class="button-container">
+              <ion-button expand="block" color="tertiary" shape="round" (click)="CargaUsuarios(1)"> Usuario 1
+              </ion-button>
+              <ion-button expand="block" color="tertiary" shape="round" (click)="CargaUsuarios(2)"> Usuario
+                2</ion-button>
+              <ion-button expand="block" color="tertiary" shape="round" (click)="CargaUsuarios(3)"> Usuario 3
+              </ion-button>
+            </div>
+          </form>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+</ion-content>
